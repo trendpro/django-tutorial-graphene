@@ -2,6 +2,7 @@
 # Ignore generated files and directories
 *.sqlite3
 __pycache__/
+django_tutorial/__pycache__/
 *.pyc
 db.sqlite3
 /static/
