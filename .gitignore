@@ -1,0 +1,29 @@
+### General ###
+# Ignore generated files and directories
+*.sqlite3
+__pycache__/
+*.pyc
+db.sqlite3
+/static/
+.DS_Store
+
+### Environments ###
+# Common virtual environment folders
+/env/
+/venv/
+
+# Editor and IDE configurations
+.vscode/
+.idea/
+
+### Project-Specific ###
+# Custom log files
+*.log
+local_settings.py
+
+### Optional ###
+# Media files (consider ignoring if you have a dedicated media storage solution)
+/media/
+
+# Environment variables
+.env

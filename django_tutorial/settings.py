@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
+from dotenv import load_dotenv
 from pathlib import Path
+
+# Load variables from the .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,10 +79,10 @@ WSGI_APPLICATION = "django_tutorial.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-POLLS_DB_NAME = "polls_db"
-DB_USER = "polls_user"
-DB_PASSWORD = "1NnbIgcur7urvLiro3RU="
-DB_HOST = "127.0.0.1"
+POLLS_DB_NAME = os.getenv("POLLS_DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
 
 DATABASES = {
     "default": {
